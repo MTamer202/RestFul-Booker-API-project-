@@ -1,164 +1,77 @@
 package org.example.tests;
-import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.*;
 
-import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.given;
+
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBodyExtractionOptions;
 import org.example.apis.*;
 import org.example.base.BaseApi;
 import org.testng.annotations.Test;
-import org.testng.annotations.*;
-import pojo.BookingDatesPojo;
-import pojo.CreateBookingPojo;
 import pojo.CreateTokenPojo;
-import java.util.Map;
-import java.util.HashMap;
 
+/******End to End Flow*****/
+/*
+* Five APIs with example for each:
+* 1-Token creation(Post)
+* 2-Get All Booking(Get)
+* 3-Get Booking Info(Get)
+* 4-Create Booking(Post)
+* 5-Fully Update Booking(Put)
+* 6-Partially Update Booking(Patch)
+* 7-Delete Booking(delete)
+*/
 public class EndToEndFlow {
-    private final String url = "https://restful-booker.herokuapp.com" ;
+    public final String url = "https://restful-booker.herokuapp.com";
     public CreateToken createTokenApi = new CreateToken();
-    CreateTokenPojo body = createTokenApi.getTokenBody("admin","password123");
+    CreateTokenPojo body = createTokenApi.getTokenBody("admin", "password123");
     public GetAllIds getAllIdsApi = new GetAllIds();
     public String firstId;
+    Response response;
+    String token;
 
-@Test
-    public void getToken(){
-        Response resp =
-                given()
-                        .spec(BaseApi.getRequestSpec())
-                        .baseUri(url)
-                        .body(body)
-
-                        .when()
-                        .post(createTokenApi.getEndPoint())
-
-                        .then()
-                        .statusCode(200)
-                        .log().body()
-                        .extract()
-                        .response();
-createTokenApi.setToken(resp.jsonPath().get("token"));
-System.out.print(createTokenApi.getToken());
+    @Test
+    public void getTokenTest() {
+        response = GetToken.getToken(body, url, createTokenApi);
+        token = GetToken.tokenExtractor(response);
+        System.out.print("The token is:" + token);
     }
 
     @Test
-
-    public void getAllIdes()
-    {
-        Response resp = given()
-                .spec(BaseApi.getRequestSpec())
-                .baseUri(url)
-
-                .when()
-                .get(getAllIdsApi.getEndPoint())
-
-                .then()
-                .statusCode(200)
-                .log().body().extract().response();
-        firstId = resp.jsonPath().getString("[0].bookingid");
-        System.out.print(firstId);
+    public void getAllIdesTest() {
+        response = GetAllIdes.getAllIdes(getAllIdsApi, url);
     }
 
-@Test
-    public void getBookingId()
-    {
-        GetBookingId testId = new GetBookingId(firstId);
-        given()
-                .spec(BaseApi.getRequestSpec())
-                .baseUri(url)
-                .when()
-                .get(testId.getEndPoint())
-
-                .then()
-                .statusCode(200)
-                .log().body().extract().response();
-
+    @Test(dependsOnMethods = {"getAllIdesTest"})
+    public void getFirstIdTest() {
+        firstId = GetAllIdes.getFirstId(response);
+        System.out.print("The First ID is: " + firstId);
     }
+
+    @Test(dependsOnMethods = {"getFirstIdTest", "getAllIdesTest"})
+    public void getBookingIdTest() {
+        response = GetBookingInfo.getBookingInfo(firstId, url);
+    }
+
     @Test
-public void CreateBooking()
-    {
-        CreateBooking createBooking = new CreateBooking();
-        BookingDatesPojo bookingDates = new BookingDatesPojo("2025-10-09", "2025-10-15");
-
-        CreateBookingPojo bookingBody = createBooking.getBookingBody("Mohamed","Tamer",1000,true,bookingDates,"HAHAHAHAHAAH");
-
-        given()
-                .spec(BaseApi.getRequestSpec())
-                .baseUri(url)
-                .body(bookingBody)
-
-                .when()
-                .post(createBooking.getEndPoint())
-
-
-                .then()
-                .statusCode(200)
-                .log().body().extract().response();
-
+    public void CreateBookingTest() {
+        String newId;
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.geId(response);
+        firstId = newId;
+        System.out.print("The new ID is: " + newId);
     }
-    @Test(dependsOnMethods = {"getAllIdes"})
-    public void UpdateBooking()
-    {
-        UpdateBooking updateBooking = new UpdateBooking(firstId);
-        BookingDatesPojo bookingDates = new BookingDatesPojo("2025-10-09", "2025-10-15");
 
-        CreateBookingPojo updateBookingBody = updateBooking.getBookingBody("Mohamed","Tamer",1000,true,bookingDates,"HAHAHAHAHAAH");
-
-        given()
-                .spec(BaseApi.getRequestSpec())
-                .baseUri(url)
-                .auth().preemptive().basic("admin", "password123")  // 👈 add credentials
-                .body(updateBookingBody)
-
-                .when()
-                .put(updateBooking.getEndPoint())
-
-
-                .then()
-                .statusCode(200)
-                .log().body().extract().response();
-
-
-
+    @Test(dependsOnMethods = {"getTokenTest", "getAllIdesTest", "CreateBookingTest"})
+    public void fullyUpdateBookingTest() {
+        response = UpdateCurrentBookingFully.updateCurrentBookingFully(url, firstId, token);
     }
-    @Test(dependsOnMethods = {"getAllIdes"})
-    public void partialUpdateBooking() {
-        UpdateBooking updateBooking = new UpdateBooking(firstId);
 
-        Map<String, Object> partialUpdate = new HashMap<>();
-        partialUpdate.put("firstname", "Mohamed");
-        partialUpdate.put("lastname", "Tamer");
-        partialUpdate.put("totalprice", 1500);
-
-        given()
-                .spec(BaseApi.getRequestSpec())
-                .baseUri(url)
-                .auth().preemptive().basic("admin", "password123")
-                .body(partialUpdate)
-                .when()
-                .patch(updateBooking.getEndPoint())
-                .then()
-                .statusCode(200)
-                .log().body().extract().response();
+    @Test(dependsOnMethods = {"getTokenTest", "getAllIdesTest", "CreateBookingTest"})
+    public void partialUpdateBookingTest() {
+        response = UpdateCurrentBookingPartially.updateCurrentBookingPartially(url, firstId, token);
     }
-    @Test(dependsOnMethods = {"getAllIdes","UpdateBooking","partialUpdateBooking"})
-    public void deleteBooking(){
-    DeleteBooking deleteBooking = new DeleteBooking(firstId);
 
-
-    given()
-            .spec(BaseApi.getRequestSpec())
-            .baseUri(url)
-            .auth().preemptive().basic("admin", "password123")
-            .when()
-            .delete(deleteBooking.getEndPoint())
-    .then()
-            .statusCode(201)
-            .log().body().extract().response();
-    System.out.println("Endpoint: " + deleteBooking.getEndPoint());
-
-}
-
-
+    @Test(dependsOnMethods = {"getTokenTest","getAllIdesTest","getFirstIdTest"})
+    public void deleteBooking() {
+        response = DeleteCurrentBooking.deleteBooking(url,firstId,token);
+    }
 }
