@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RestAssured Test Suite">
+    <test name="Booker API Tests">
+        <classes>
+            <class name="org.example.tests.EndToEndFlow"/>
+            <methods>
+                <include name="getTokenTest"/>
+                <include name="getAllIdesTest"/>
+                <include name="CreateBookingTest"/>
+            </methods>
+        </classes>
+    </test>
+</suite>

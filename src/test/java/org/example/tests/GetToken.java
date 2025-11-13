@@ -24,7 +24,7 @@ public class GetToken {
                         .log().body()
                         .extract()
                         .response();
-        createTokenApi.setToken(resp.jsonPath().get("token"));
+        //createTokenApi.setToken(resp.jsonPath().get("token"));
         return resp;
     }
 

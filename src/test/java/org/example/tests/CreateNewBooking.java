@@ -3,13 +3,13 @@ package org.example.tests;
 import io.restassured.response.Response;
 import org.example.apis.CreateBooking;
 import org.example.base.BaseApi;
+import org.testng.annotations.Test;
 import pojo.BookingDatesPojo;
 import pojo.CreateBookingPojo;
 
 import static io.restassured.RestAssured.given;
 
 public class CreateNewBooking {
-
     public static Response createNewBooking(String url) {
         CreateBooking createBooking = new CreateBooking();
         BookingDatesPojo bookingDates = new BookingDatesPojo("2025-10-09", "2025-10-15");
@@ -31,7 +31,6 @@ public class CreateNewBooking {
         return resp;
 
     }
-
     public static String geId(Response resp) {
         String bookingId;
         bookingId = resp.jsonPath().getString("bookingid");
