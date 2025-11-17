@@ -31,7 +31,7 @@ public class CreateNewBooking {
         return resp;
 
     }
-    public static String geId(Response resp) {
+    public static String getId(Response resp) {
         String bookingId;
         bookingId = resp.jsonPath().getString("bookingid");
         return bookingId;

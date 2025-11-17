@@ -55,7 +55,7 @@ public class EndToEndFlow {
     public void CreateBookingTest() {
         String newId;
         response = CreateNewBooking.createNewBooking(url);
-        newId = CreateNewBooking.geId(response);
+        newId = CreateNewBooking.getId(response);
         firstId = newId;
         System.out.print("The new ID is: " + newId);
     }
