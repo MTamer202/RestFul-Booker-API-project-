@@ -27,51 +27,53 @@ public class EndToEndFlow {
     public String firstId;
     Response response;
     String token;
+    String newId;
 
+
+    /****Tests To Pass***/ /***------> How to deal with bad tests or even assert using this**/
     @Test
-    public void getTokenTest() {
+    public void TokenCreation()
+    {
         response = GetToken.getToken(body, url, createTokenApi);
         token = GetToken.tokenExtractor(response);
-        System.out.print("The token is:" + token);
     }
-
     @Test
-    public void getAllIdesTest() {
+    public void getIdes() {
         response = GetAllIdes.getAllIdes(getAllIdsApi, url);
-    }
-
-    @Test(dependsOnMethods = {"getAllIdesTest"})
-    public void getFirstIdTest() {
         firstId = GetAllIdes.getFirstId(response);
-        System.out.print("The First ID is: " + firstId);
-    }
-
-    @Test(dependsOnMethods = {"getFirstIdTest", "getAllIdesTest"})
-    public void getBookingIdTest() {
         response = GetBookingInfo.getBookingInfo(firstId, url);
     }
-
     @Test
-    public void CreateBookingTest() {
-        String newId;
+    public void BookingCreation()
+    {
         response = CreateNewBooking.createNewBooking(url);
         newId = CreateNewBooking.getId(response);
-        firstId = newId;
-        System.out.print("The new ID is: " + newId);
     }
-
-    @Test(dependsOnMethods = {"getTokenTest", "getAllIdesTest", "CreateBookingTest"})
-    public void fullyUpdateBookingTest() {
-        response = UpdateCurrentBookingFully.updateCurrentBookingFully(url, firstId, token);
+    @Test
+    public void BookingFullyUpdate()
+    {
+        response = GetToken.getToken(body, url, createTokenApi);
+        token = GetToken.tokenExtractor(response);
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.getId(response);
+        response = UpdateCurrentBookingFully.updateCurrentBookingFully(url, newId, token);
     }
-
-    @Test(dependsOnMethods = {"getTokenTest", "getAllIdesTest", "CreateBookingTest"})
-    public void partialUpdateBookingTest() {
-        response = UpdateCurrentBookingPartially.updateCurrentBookingPartially(url, firstId, token);
+    @Test
+    public void BookingPartiallyUpdate()
+    {
+        response = GetToken.getToken(body, url, createTokenApi);
+        token = GetToken.tokenExtractor(response);
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.getId(response);
+        response = UpdateCurrentBookingPartially.updateCurrentBookingPartially(url, newId, token);
     }
-
-    @Test(dependsOnMethods = {"getTokenTest","getAllIdesTest","getFirstIdTest"})
-    public void deleteBooking() {
-        response = DeleteCurrentBooking.deleteBooking(url,firstId,token);
+    @Test
+    public void BookingDelete()
+    {
+        response = GetToken.getToken(body, url, createTokenApi);
+        token = GetToken.tokenExtractor(response);
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.getId(response);
+        response = DeleteCurrentBooking.deleteBooking(url,newId,token);
     }
 }

@@ -6,6 +6,7 @@ import org.example.base.BaseApi;
 import pojo.CreateTokenPojo;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class GetToken {
 
@@ -22,9 +23,9 @@ public class GetToken {
                         .then()
                         .statusCode(200)
                         .log().body()
+                        .body("token", notNullValue())
                         .extract()
                         .response();
-        //createTokenApi.setToken(resp.jsonPath().get("token"));
         return resp;
     }
 
@@ -32,6 +33,5 @@ public class GetToken {
         String token;
         token = resp.jsonPath().getString("token");
         return token;
-
     }
 }

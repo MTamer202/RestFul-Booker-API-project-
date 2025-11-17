@@ -4,9 +4,12 @@
         <classes>
             <class name="org.example.tests.EndToEndFlow"/>
             <methods>
-                <include name="getTokenTest"/>
-                <include name="getAllIdesTest"/>
-                <include name="CreateBookingTest"/>
+                <include name="TokenCreation"/>
+                <include name="getIdes"/>
+                <include name="BookingCreation"/>
+                <include name="BookingFullyUpdate"/>
+                <include name="BookingPartiallyUpdate"/>
+                <include name="BookingDelete"/>
             </methods>
         </classes>
     </test>
