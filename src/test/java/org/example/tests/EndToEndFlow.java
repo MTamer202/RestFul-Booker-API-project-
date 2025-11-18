@@ -2,9 +2,13 @@ package org.example.tests;
 
 import static io.restassured.RestAssured.given;
 
+import TestToFail.CreateNewBookingWithWrongSchema;
+import TestToFail.DeleteCurrentBookingUnautherized;
+import TestToFail.GetTokenWithBadCredintials;
+import TestToFail.UpdateCurrentBookingNonAuthorized;
+import TestToPass.*;
 import io.restassured.response.Response;
 import org.example.apis.*;
-import org.example.base.BaseApi;
 import org.testng.annotations.Test;
 import pojo.CreateTokenPojo;
 
@@ -22,7 +26,7 @@ import pojo.CreateTokenPojo;
 public class EndToEndFlow {
     public final String url = "https://restful-booker.herokuapp.com";
     public CreateToken createTokenApi = new CreateToken();
-    CreateTokenPojo body = createTokenApi.getTokenBody("admin", "password123");
+    CreateTokenPojo validBody = createTokenApi.getTokenBody("admin", "password123");
     public GetAllIds getAllIdsApi = new GetAllIds();
     public String firstId;
     Response response;
@@ -30,11 +34,11 @@ public class EndToEndFlow {
     String newId;
 
 
-    /****Tests To Pass***/ /***------> How to deal with bad tests or even assert using this**/
+    /****Tests To Pass***/
     @Test
     public void TokenCreation()
     {
-        response = GetToken.getToken(body, url, createTokenApi);
+        response = GetToken.getToken(validBody, url, createTokenApi);
         token = GetToken.tokenExtractor(response);
     }
     @Test
@@ -52,7 +56,7 @@ public class EndToEndFlow {
     @Test
     public void BookingFullyUpdate()
     {
-        response = GetToken.getToken(body, url, createTokenApi);
+        response = GetToken.getToken(validBody, url, createTokenApi);
         token = GetToken.tokenExtractor(response);
         response = CreateNewBooking.createNewBooking(url);
         newId = CreateNewBooking.getId(response);
@@ -61,7 +65,7 @@ public class EndToEndFlow {
     @Test
     public void BookingPartiallyUpdate()
     {
-        response = GetToken.getToken(body, url, createTokenApi);
+        response = GetToken.getToken(validBody, url, createTokenApi);
         token = GetToken.tokenExtractor(response);
         response = CreateNewBooking.createNewBooking(url);
         newId = CreateNewBooking.getId(response);
@@ -70,10 +74,56 @@ public class EndToEndFlow {
     @Test
     public void BookingDelete()
     {
-        response = GetToken.getToken(body, url, createTokenApi);
+        response = GetToken.getToken(validBody, url, createTokenApi);
         token = GetToken.tokenExtractor(response);
         response = CreateNewBooking.createNewBooking(url);
         newId = CreateNewBooking.getId(response);
         response = DeleteCurrentBooking.deleteBooking(url,newId,token);
     }
+    /***TestToFail***/
+    @Test
+    public void TokenWithWrongCredintialsInvalidUserName(){
+        CreateTokenPojo invalidBodyWrongUserName = createTokenApi.getTokenBody("Mohamed", "password123");
+        response = GetTokenWithBadCredintials.getToken(invalidBodyWrongUserName, url, createTokenApi);
+    }
+    @Test
+    public void TokenWithWrongCredintialsInvalidPassword(){
+        CreateTokenPojo invalidBodyWrongPassword = createTokenApi.getTokenBody("admin", "Mohamed");
+        response = GetTokenWithBadCredintials.getToken(invalidBodyWrongPassword, url, createTokenApi);
+    }
+    @Test
+    public void BookingCreationWithWrongSchema()
+    {
+        response = CreateNewBookingWithWrongSchema.createNewBookingNoFirstName(url);
+    }
+    @Test
+    public void BookingCreationWithWrongCheckinCheckoutCompare()
+    {
+        response = CreateNewBookingWithWrongSchema.createNewBookingWithWrongCheckinCheckout(url);
+    }
+    @Test
+    public void UpdateCurrentBookingFullyNonAutherized()
+    {
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.getId(response);
+        response = UpdateCurrentBookingNonAuthorized.updateCurrentBookingFully(url,newId);
+    }
+    @Test
+    public void UpdateCurrentBookingPartiallyNonAutherized()
+    {
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.getId(response);
+        response = UpdateCurrentBookingNonAuthorized.updateCurrentBookingPartially(url,newId);
+    }
+    @Test
+    public void DeteteCurrentBookingUnauthorized()
+    {
+        response = CreateNewBooking.createNewBooking(url);
+        newId = CreateNewBooking.getId(response);
+        response = DeleteCurrentBookingUnautherized.deleteBookingUnauthorized(url,newId);
+    }
+
+
+
+
 }

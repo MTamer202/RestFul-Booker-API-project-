@@ -1,15 +1,25 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="RestAssured Test Suite">
-    <test name="Booker API Tests">
+
+    <test name="All Tests">
         <classes>
             <class name="org.example.tests.EndToEndFlow"/>
             <methods>
+                <!-- TestToPass -->
                 <include name="TokenCreation"/>
                 <include name="getIdes"/>
                 <include name="BookingCreation"/>
                 <include name="BookingFullyUpdate"/>
                 <include name="BookingPartiallyUpdate"/>
                 <include name="BookingDelete"/>
+
+                <!-- TestToFail -->
+                <include name="TokenWithWrongCredintialsInvalidUserName"/>
+                <include name="TokenWithWrongCredintialsInvalidPassword"/>
+                <include name="BookingCreationWithWrongCheckinCheckoutCompare"/>
+                <include name="UpdateCurrentBookingFullyNonAutherized"/>
+                <include name="UpdateCurrentBookingPartiallyNonAutherized"/>
+                <include name="DeteteCurrentBookingUnauthorized"/>
             </methods>
         </classes>
     </test>

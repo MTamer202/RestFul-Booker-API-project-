@@ -1,4 +1,4 @@
-package org.example.tests;
+package TestToPass;
 
 import io.restassured.response.Response;
 import org.example.apis.CreateToken;
