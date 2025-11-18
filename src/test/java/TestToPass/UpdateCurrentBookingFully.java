@@ -26,7 +26,7 @@ public class UpdateCurrentBookingFully {
 
                         .then()
                         .statusCode(200)
-                        .log().body().extract().response();
+                        .extract().response();
         return resp;
     }
 }

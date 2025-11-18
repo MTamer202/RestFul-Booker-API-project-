@@ -47,7 +47,7 @@ public class UpdateCurrentBookingNonAuthorized {
                         .patch(updateBooking.getEndPoint())
                         .then()
                         .statusCode(403)
-                        .log().body().extract().response();
+                        .extract().response();
         return resp;
     }
 }

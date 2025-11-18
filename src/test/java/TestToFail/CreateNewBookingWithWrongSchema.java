@@ -27,7 +27,7 @@ public class CreateNewBookingWithWrongSchema {
 
                         .then()
                         .statusCode(500)
-                        .log().body().extract().response();
+                        .extract().response();
         return resp;
     }
 
@@ -54,7 +54,7 @@ public class CreateNewBookingWithWrongSchema {
 
                             .then()
                             .statusCode(200)
-                            .log().body().extract().response();
+                            .extract().response();
         }
         else {
              resp =
@@ -69,7 +69,7 @@ public class CreateNewBookingWithWrongSchema {
 
                             .then()
                             .statusCode(500)
-                            .log().body().extract().response();
+                           .extract().response();
         }
         return resp;
     }

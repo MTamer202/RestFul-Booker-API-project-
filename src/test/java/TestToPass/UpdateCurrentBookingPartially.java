@@ -17,8 +17,6 @@ public class UpdateCurrentBookingPartially {
         partialUpdate.put("firstname", "Mazen");
         partialUpdate.put("lastname", "Ehab");
         partialUpdate.put("totalprice", 2000);
-        System.out.println("Token: " + token);
-        System.out.println("Endpoint: " + updateBooking.getEndPoint());
         Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
@@ -29,7 +27,7 @@ public class UpdateCurrentBookingPartially {
                         .patch(updateBooking.getEndPoint())
                         .then()
                         .statusCode(200)
-                        .log().body().extract().response();
+                        .extract().response();
         return resp;
     }
 }

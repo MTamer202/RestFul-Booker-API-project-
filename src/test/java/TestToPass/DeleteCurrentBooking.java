@@ -18,7 +18,7 @@ public class DeleteCurrentBooking {
                         .delete(deleteBooking.getEndPoint())
                         .then()
                         .statusCode(201)
-                        .log().body().extract().response();
+                        .extract().response();
         System.out.println("Endpoint: " + deleteBooking.getEndPoint());
         return resp;
 

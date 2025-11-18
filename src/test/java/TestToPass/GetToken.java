@@ -22,7 +22,6 @@ public class GetToken {
 
                         .then()
                         .statusCode(200)
-                        .log().body()
                         .body("token", notNullValue())
                         .extract()
                         .response();

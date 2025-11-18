@@ -23,7 +23,6 @@ public class GetTokenWithBadCredintials {
 
                         .then()
                         .statusCode(200)
-                        .log().body()
                         .body("reason",containsString("Bad credentials") )
                         .extract()
                         .response();
