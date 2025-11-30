@@ -1,18 +1,17 @@
 package org.example.apis;
 
+import io.qameta.allure.Step;
 import pojo.CreateTokenPojo;
 
 public class CreateToken {
     private String endPoint = "/auth";
     private CreateTokenPojo tokenPojo = new CreateTokenPojo();
     private String expectedToken ;
-
     public  CreateTokenPojo getTokenBody(String username , String password){
         tokenPojo.setUsername(username);
         tokenPojo.setPassword(password);
         return  tokenPojo ;
     }
-
     public String getEndPoint() {
         return endPoint;
     }

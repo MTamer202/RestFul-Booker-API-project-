@@ -1,0 +1,5 @@
+[INFO] - [30-11-2025 14:14:14] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  E:\study\ITI content\api\my project\TestRunner.xml
+
+[INFO] - [30-11-2025 14:14:20] [main] [org.example.services.bookingServices] - Wrong Schema Missing argument
+

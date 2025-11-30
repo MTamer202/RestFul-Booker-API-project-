@@ -1,0 +1,9 @@
+[INFO] - [30-11-2025 11:51:49] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\M.TAMER\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+[INFO] - [30-11-2025 11:51:56] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 11:51:56] [main] [org.example.services.authenticationServices] - Token is: a3ef53675abe464
+
+[INFO] - [30-11-2025 11:51:58] [main] [org.example.services.authenticationServices] - Bad credentials
+

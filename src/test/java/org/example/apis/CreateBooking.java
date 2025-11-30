@@ -19,7 +19,7 @@ public class CreateBooking
         return bookingPojo;
     }
 
-    public  CreateBookingPojo getBookingBodyWrongSchema(String lastname, int totalprice, boolean depositpaid,BookingDatesPojo bookingDates , String additionalneeds) {
+    public  CreateBookingPojo getBookingBodyWrongSchemaNoFirstName(String lastname, int totalprice, boolean depositpaid,BookingDatesPojo bookingDates , String additionalneeds) {
         bookingPojo.setLastname(lastname);
         bookingPojo.setTotalprice(totalprice);
         bookingPojo.setDepositpaid(depositpaid);
@@ -27,8 +27,6 @@ public class CreateBooking
         bookingPojo.setBookingdates(bookingDates);
         return bookingPojo;
     }
-
-
 
     public String getEndPoint() {
         return endPoint;

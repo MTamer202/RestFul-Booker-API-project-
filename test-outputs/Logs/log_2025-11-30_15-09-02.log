@@ -1,0 +1,99 @@
+[INFO] - [30-11-2025 15:09:04] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\M.TAMER\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+[INFO] - [30-11-2025 15:09:10] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:12] [main] [org.example.services.bookingServices] - The ID is: 3939
+
+[INFO] - [30-11-2025 15:09:13] [main] [org.example.services.bookingServices] - Wrong Schema Missing argument
+
+[INFO] - [30-11-2025 15:09:14] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 15:09:14] [main] [org.example.services.authenticationServices] - Token is: dc014e2f6bf6bb2
+
+[INFO] - [30-11-2025 15:09:15] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:15] [main] [org.example.services.bookingServices] - The ID is: 3987
+
+[INFO] - [30-11-2025 15:09:16] [main] [org.example.services.bookingServices] - booking with ID = 3987is Deleted
+
+[INFO] - [30-11-2025 15:09:16] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 15:09:16] [main] [org.example.services.authenticationServices] - Token is: 44e33c76e2127e0
+
+[INFO] - [30-11-2025 15:09:17] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:17] [main] [org.example.services.bookingServices] - The ID is: 4005
+
+[INFO] - [30-11-2025 15:09:18] [main] [org.example.services.bookingServices] - booking with ID = 4005is Deleted
+
+[INFO] - [30-11-2025 15:09:19] [main] [org.example.services.bookingServices] - Cant delete a deleted Booking
+
+[INFO] - [30-11-2025 15:09:20] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 15:09:20] [main] [org.example.services.authenticationServices] - Token is: a44b63c42bcd006
+
+[INFO] - [30-11-2025 15:09:21] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:21] [main] [org.example.services.bookingServices] - The ID is: 4034
+
+[INFO] - [30-11-2025 15:09:21] [main] [org.example.services.bookingServices] - booking with ID = 4034is Deleted
+
+[INFO] - [30-11-2025 15:09:22] [main] [org.example.services.bookingServices] - Method not allowed Cant update a deleted one
+
+[INFO] - [30-11-2025 15:09:23] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 15:09:23] [main] [org.example.services.authenticationServices] - Token is: 49c75e51860ad40
+
+[INFO] - [30-11-2025 15:09:24] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:24] [main] [org.example.services.bookingServices] - The ID is: 4065
+
+[INFO] - [30-11-2025 15:09:25] [main] [org.example.services.bookingServices] - booking with ID = 4065 is Updated
+
+[INFO] - [30-11-2025 15:09:25] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 15:09:25] [main] [org.example.services.authenticationServices] - Token is: b5526953463dbdb
+
+[INFO] - [30-11-2025 15:09:26] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:26] [main] [org.example.services.bookingServices] - The ID is: 4084
+
+[INFO] - [30-11-2025 15:09:27] [main] [org.example.services.bookingServices] - booking with ID = 4084is Deleted
+
+[INFO] - [30-11-2025 15:09:28] [main] [org.example.services.bookingServices] - Method not allowed Cant update a deleted one
+
+[INFO] - [30-11-2025 15:09:28] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 15:09:28] [main] [org.example.services.authenticationServices] - Token is: 2f5241a25dcfb39
+
+[INFO] - [30-11-2025 15:09:29] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:29] [main] [org.example.services.bookingServices] - The ID is: 4112
+
+[INFO] - [30-11-2025 15:09:30] [main] [org.example.services.bookingServices] - booking with ID = 4112 is Updated
+
+[INFO] - [30-11-2025 15:09:30] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:30] [main] [org.example.services.bookingServices] - The ID is: 4121
+
+[INFO] - [30-11-2025 15:09:31] [main] [org.example.services.bookingServices] - Not authorized Delete
+
+[INFO] - [30-11-2025 15:09:32] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:32] [main] [org.example.services.bookingServices] - The ID is: 4136
+
+[INFO] - [30-11-2025 15:09:33] [main] [org.example.services.bookingServices] - Not authorized Fully Update
+
+[INFO] - [30-11-2025 15:09:33] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 15:09:33] [main] [org.example.services.bookingServices] - The ID is: 4151
+
+[INFO] - [30-11-2025 15:09:34] [main] [org.example.services.bookingServices] - Not authorized Partially Update
+
+[INFO] - [30-11-2025 15:09:35] [main] [org.example.services.bookingServices] - All IDs is here
+
+[INFO] - [30-11-2025 15:09:35] [main] [org.example.services.bookingServices] - First ID is: 426
+
+[INFO] - [30-11-2025 15:09:36] [main] [org.example.services.bookingServices] - Specific booking info
+

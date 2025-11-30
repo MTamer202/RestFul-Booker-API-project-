@@ -1,0 +1,73 @@
+[INFO] - [30-11-2025 10:15:40] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  E:\study\ITI content\api\my project\TestRunner.xml
+
+[INFO] - [30-11-2025 10:15:47] [main] [TestToPass.GetToken] - Token is Created
+
+[INFO] - [30-11-2025 10:15:47] [main] [TestToPass.GetToken] - Token is: 8df3e1daafcc215
+
+[INFO] - [30-11-2025 10:15:48] [main] [TestToPass.GetAllIdes] - All IDs is here
+
+[INFO] - [30-11-2025 10:15:48] [main] [TestToPass.GetAllIdes] - First ID is: 1624
+
+[INFO] - [30-11-2025 10:15:49] [main] [TestToPass.GetBookingInfo] - Specific booking info
+
+[INFO] - [30-11-2025 10:15:50] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:15:50] [main] [TestToPass.CreateNewBooking] - The ID is: 2500
+
+[INFO] - [30-11-2025 10:15:50] [main] [TestToPass.GetToken] - Token is Created
+
+[INFO] - [30-11-2025 10:15:50] [main] [TestToPass.GetToken] - Token is: 4e59e5772afbdad
+
+[INFO] - [30-11-2025 10:15:51] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:15:51] [main] [TestToPass.CreateNewBooking] - The ID is: 2512
+
+[INFO] - [30-11-2025 10:15:52] [main] [TestToPass.UpdateCurrentBookingFully] - booking with ID = 2512is Updated
+
+[INFO] - [30-11-2025 10:15:53] [main] [TestToPass.GetToken] - Token is Created
+
+[INFO] - [30-11-2025 10:15:53] [main] [TestToPass.GetToken] - Token is: a6755bde43733f9
+
+[INFO] - [30-11-2025 10:15:53] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:15:53] [main] [TestToPass.CreateNewBooking] - The ID is: 2534
+
+[INFO] - [30-11-2025 10:15:54] [main] [TestToPass.UpdateCurrentBookingPartially] - booking with ID = 2534is Updated
+
+[INFO] - [30-11-2025 10:15:55] [main] [TestToPass.GetToken] - Token is Created
+
+[INFO] - [30-11-2025 10:15:55] [main] [TestToPass.GetToken] - Token is: 622208ddba057c5
+
+[INFO] - [30-11-2025 10:15:56] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:15:56] [main] [TestToPass.CreateNewBooking] - The ID is: 2557
+
+[INFO] - [30-11-2025 10:15:56] [main] [TestToPass.DeleteCurrentBooking] - booking with ID = 2557is Deleted
+
+[INFO] - [30-11-2025 10:15:57] [main] [TestToFail.GetTokenWithBadCredintials] - Bad credentials
+
+[INFO] - [30-11-2025 10:15:58] [main] [TestToFail.GetTokenWithBadCredintials] - Bad credentials
+
+[INFO] - [30-11-2025 10:15:59] [main] [TestToFail.CreateNewBookingWithWrongSchema] - Wrong Schema Checkin and checkout problem
+
+[INFO] - [30-11-2025 10:15:59] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:15:59] [main] [TestToPass.CreateNewBooking] - The ID is: 2590
+
+[INFO] - [30-11-2025 10:16:00] [main] [TestToFail.UpdateCurrentBookingNonAuthorized] - Not authorized Fully Update
+
+[INFO] - [30-11-2025 10:16:01] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:16:01] [main] [TestToPass.CreateNewBooking] - The ID is: 2599
+
+[INFO] - [30-11-2025 10:16:02] [main] [TestToFail.UpdateCurrentBookingNonAuthorized] - Not authorized Partially Update
+
+[INFO] - [30-11-2025 10:16:02] [main] [TestToPass.CreateNewBooking] - Booking Created
+
+[INFO] - [30-11-2025 10:16:02] [main] [TestToPass.CreateNewBooking] - The ID is: 2615
+
+[INFO] - [30-11-2025 10:16:03] [main] [TestToFail.DeleteCurrentBookingUnautherized] - Not authorized Delete
+
+[INFO] - [30-11-2025 10:16:03] [main] [utiles.AllureUtils] - Logs attatched To allure report
+

@@ -1,0 +1,43 @@
+[INFO] - [30-11-2025 13:04:54] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\M.TAMER\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+[INFO] - [30-11-2025 13:04:59] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 13:05:00] [main] [org.example.services.bookingServices] - The ID is: 1842
+
+[INFO] - [30-11-2025 13:05:01] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 13:05:01] [main] [org.example.services.authenticationServices] - Token is: 4582b27f7939244
+
+[INFO] - [30-11-2025 13:05:02] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 13:05:02] [main] [org.example.services.bookingServices] - The ID is: 1863
+
+[INFO] - [30-11-2025 13:05:03] [main] [org.example.services.bookingServices] - booking with ID = 1863is Deleted
+
+[INFO] - [30-11-2025 13:05:04] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 13:05:04] [main] [org.example.services.authenticationServices] - Token is: f7d9ef2d9230907
+
+[INFO] - [30-11-2025 13:05:04] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 13:05:04] [main] [org.example.services.bookingServices] - The ID is: 1888
+
+[INFO] - [30-11-2025 13:05:05] [main] [org.example.services.bookingServices] - booking with ID = 1888 is Updated
+
+[INFO] - [30-11-2025 13:05:06] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 13:05:06] [main] [org.example.services.authenticationServices] - Token is: 55e769fcd41191d
+
+[INFO] - [30-11-2025 13:05:07] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 13:05:07] [main] [org.example.services.bookingServices] - The ID is: 1909
+
+[INFO] - [30-11-2025 13:05:08] [main] [org.example.services.bookingServices] - booking with ID = 1909 is Updated
+
+[INFO] - [30-11-2025 13:05:08] [main] [org.example.services.bookingServices] - All IDs is here
+
+[INFO] - [30-11-2025 13:05:09] [main] [org.example.services.bookingServices] - First ID is: 230
+
+[INFO] - [30-11-2025 13:05:09] [main] [org.example.services.bookingServices] - Specific booking info
+

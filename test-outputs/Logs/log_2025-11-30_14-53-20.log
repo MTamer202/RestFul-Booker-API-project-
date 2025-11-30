@@ -1,0 +1,15 @@
+[INFO] - [30-11-2025 14:53:22] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\M.TAMER\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+[INFO] - [30-11-2025 14:53:29] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 14:53:29] [main] [org.example.services.authenticationServices] - Token is: 757efc69e0738f0
+
+[INFO] - [30-11-2025 14:53:30] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:53:30] [main] [org.example.services.bookingServices] - The ID is: 1700
+
+[INFO] - [30-11-2025 14:53:31] [main] [org.example.services.bookingServices] - booking with ID = 1700is Deleted
+
+[INFO] - [30-11-2025 14:53:31] [main] [org.example.services.bookingServices] - Cant delete a deleted Booking
+

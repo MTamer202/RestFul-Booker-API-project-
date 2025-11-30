@@ -3,24 +3,9 @@
 
     <test name="All Tests">
         <classes>
-            <class name="org.example.tests.EndToEndFlow"/>
-            <methods>
-                <!-- TestToPass -->
-                <include name="TokenCreation"/>
-                <include name="getIdes"/>
-                <include name="BookingCreation"/>
-                <include name="BookingFullyUpdate"/>
-                <include name="BookingPartiallyUpdate"/>
-                <include name="BookingDelete"/>
+            <class name="org.example.tests.AuthenticationTests"/>
+            <class name="org.example.tests.BookingTests"/>
 
-                <!-- TestToFail -->
-                <include name="TokenWithWrongCredintialsInvalidUserName"/>
-                <include name="TokenWithWrongCredintialsInvalidPassword"/>
-                <include name="BookingCreationWithWrongCheckinCheckoutCompare"/>
-                <include name="UpdateCurrentBookingFullyNonAutherized"/>
-                <include name="UpdateCurrentBookingPartiallyNonAutherized"/>
-                <include name="DeteteCurrentBookingUnauthorized"/>
-            </methods>
         </classes>
     </test>
 </suite>

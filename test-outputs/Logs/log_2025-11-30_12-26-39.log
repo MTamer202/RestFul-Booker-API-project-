@@ -1,0 +1,14 @@
+[INFO] - [30-11-2025 12:26:41] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\M.TAMER\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+[INFO] - [30-11-2025 12:26:47] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 12:26:48] [main] [org.example.services.bookingServices] - The ID is: 3120
+
+[INFO] - [30-11-2025 12:26:49] [main] [org.example.services.bookingServices] - All IDs is here
+
+[ERROR] - [30-11-2025 12:26:49] [main] [io.qameta.allure.util.NamingUtils] - Could not find parameter BookingID
+[INFO] - [30-11-2025 12:26:49] [main] [org.example.services.bookingServices] - First ID is: 1422
+
+[INFO] - [30-11-2025 12:26:50] [main] [org.example.services.bookingServices] - Specific booking info
+

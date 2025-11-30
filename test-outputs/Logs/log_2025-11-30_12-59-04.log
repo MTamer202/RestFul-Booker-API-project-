@@ -1,0 +1,13 @@
+[INFO] - [30-11-2025 12:59:06] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\M.TAMER\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+[INFO] - [30-11-2025 12:59:13] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 12:59:13] [main] [org.example.services.authenticationServices] - Token is: caf90b20a326204
+
+[INFO] - [30-11-2025 12:59:13] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 12:59:13] [main] [org.example.services.bookingServices] - The ID is: 4365
+
+[INFO] - [30-11-2025 12:59:14] [main] [org.example.services.bookingServices] - booking with ID = 4365 is Updated
+

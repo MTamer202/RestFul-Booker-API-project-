@@ -1,0 +1,63 @@
+[INFO] - [30-11-2025 14:28:26] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  E:\study\ITI content\api\my project\TestRunner.xml
+
+[INFO] - [30-11-2025 14:28:31] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:33] [main] [org.example.services.bookingServices] - The ID is: 3998
+
+[INFO] - [30-11-2025 14:28:34] [main] [org.example.services.bookingServices] - Wrong Schema Missing argument
+
+[INFO] - [30-11-2025 14:28:35] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 14:28:35] [main] [org.example.services.authenticationServices] - Token is: 3b1ab970220e44b
+
+[INFO] - [30-11-2025 14:28:36] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:36] [main] [org.example.services.bookingServices] - The ID is: 4041
+
+[INFO] - [30-11-2025 14:28:37] [main] [org.example.services.bookingServices] - booking with ID = 4041is Deleted
+
+[INFO] - [30-11-2025 14:28:37] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 14:28:37] [main] [org.example.services.authenticationServices] - Token is: 0696fcfd74b394e
+
+[INFO] - [30-11-2025 14:28:38] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:38] [main] [org.example.services.bookingServices] - The ID is: 4060
+
+[INFO] - [30-11-2025 14:28:39] [main] [org.example.services.bookingServices] - booking with ID = 4060 is Updated
+
+[INFO] - [30-11-2025 14:28:40] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [30-11-2025 14:28:40] [main] [org.example.services.authenticationServices] - Token is: 9c424ddbd05dacf
+
+[INFO] - [30-11-2025 14:28:40] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:40] [main] [org.example.services.bookingServices] - The ID is: 4077
+
+[INFO] - [30-11-2025 14:28:41] [main] [org.example.services.bookingServices] - booking with ID = 4077 is Updated
+
+[INFO] - [30-11-2025 14:28:42] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:42] [main] [org.example.services.bookingServices] - The ID is: 4093
+
+[INFO] - [30-11-2025 14:28:43] [main] [org.example.services.bookingServices] - Not authorized Delete
+
+[INFO] - [30-11-2025 14:28:43] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:43] [main] [org.example.services.bookingServices] - The ID is: 4108
+
+[INFO] - [30-11-2025 14:28:44] [main] [org.example.services.bookingServices] - Not authorized Fully Update
+
+[INFO] - [30-11-2025 14:28:45] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [30-11-2025 14:28:45] [main] [org.example.services.bookingServices] - The ID is: 4124
+
+[INFO] - [30-11-2025 14:28:45] [main] [org.example.services.bookingServices] - Not authorized Partially Update
+
+[INFO] - [30-11-2025 14:28:46] [main] [org.example.services.bookingServices] - All IDs is here
+
+[INFO] - [30-11-2025 14:28:47] [main] [org.example.services.bookingServices] - First ID is: 3801
+
+[INFO] - [30-11-2025 14:28:47] [main] [org.example.services.bookingServices] - Specific booking info
+
