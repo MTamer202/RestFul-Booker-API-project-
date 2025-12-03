@@ -4,8 +4,29 @@
     <test name="All Tests">
         <classes>
             <class name="org.example.tests.AuthenticationTests"/>
+            <methods>
+                <include name="TokenCreationValidLogin"/>
+                <include name="TokenWithWrongCredintialsInvalidUserName"/>
+                <include name="TokenWithWrongCredintialsInvalidPassword"/>
+                <include name="TokenWithWrongCredintialsEmptyData"/>
+            </methods>
             <class name="org.example.tests.BookingTests"/>
-
+            <methods>
+                <include name="getIdes"/>
+                <include name="getSpecificBookingInfo"/>
+                <include name="BookingCreation"/>
+                <include name="BookingFullyUpdate"/>
+                <include name="BookingPartiallyUpdate"/>
+                <include name="BookingDelete"/>
+                <include name="BookingCreationWithWrongSchemaNoFirstName"/>
+                <include name="BookingCreationWithWrongCheckinCheckoutCompare"/>
+                <include name="UpdateCurrentBookingFullyNonAutherized"/>
+                <include name="UpdateCurrentBookingPartiallyNonAutherized"/>
+                <include name="DeteteCurrentBookingUnauthorized"/>
+                <include name="BookingFullUpdateAfterDelete"/>
+                <include name="BookingPartialUpdateAfterDelete"/>
+                <include name="BookingDeleteTwoTimes"/>
+            </methods>
         </classes>
     </test>
 </suite>

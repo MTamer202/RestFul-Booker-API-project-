@@ -9,7 +9,7 @@
 
     <name>iti</name>
     <url>http://maven.apache.org</url>
-<build>
+    <build>
     <directory>test-outputs/target</directory>
     <plugins>
         <plugin>
@@ -50,7 +50,6 @@
     </dependencyManagement>
 
     <dependencies>
-
         <!-- Selenium Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

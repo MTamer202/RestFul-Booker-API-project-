@@ -13,7 +13,9 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class authenticationServices {
 
-  /**Good Scenarios**/
+    /**
+     * Good Scenarios
+     **/
     @Step("Create Token with valid inputs")
     public static Response getToken(CreateTokenPojo body, String url, CreateToken createTokenApi) {
         Response resp =
@@ -33,14 +35,18 @@ public class authenticationServices {
         LogsUtils.info("Token is Created");
         return resp;
     }
+
     @Step("Extract token From response")
     public static String tokenExtractor(Response resp) {
         String token;
         token = resp.jsonPath().getString("token");
-        LogsUtils.info("Token is: "+token);
+        LogsUtils.info("Token is: " + token);
         return token;
     }
-    /**Bad Scenarios**/
+
+    /**
+     * Bad Scenarios
+     **/
     public static Response getTokenWithBadCredintials(CreateTokenPojo body, String url, CreateToken createTokenApi) {
         Response resp =
                 given()
@@ -53,7 +59,7 @@ public class authenticationServices {
 
                         .then()
                         .statusCode(200)
-                        .body("reason",containsString("Bad credentials"))
+                        .body("reason", containsString("Bad credentials"))
                         .extract()
                         .response();
         LogsUtils.info("Bad credentials");

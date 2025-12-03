@@ -11,11 +11,14 @@ import utiles.LogsUtils;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
+
 import static org.hamcrest.Matchers.not;
 import static io.restassured.RestAssured.given;
 
 public class bookingServices {
-    /**good scenarios**/
+    /**
+     * good scenarios
+     **/
     @Step("Get All IDs in DataBase")
     public static Response getAllIdes(GetAllIds getAllIdsApi, String url) {
         String firstId;
@@ -33,13 +36,15 @@ public class bookingServices {
         return resp;
 
     }
+
     @Step("Get first ID")
     public static String getFirstId(Response resp) {
         String firstId;
         firstId = resp.jsonPath().getString("[0].bookingid");
-        LogsUtils.info("First ID is: "+firstId);
+        LogsUtils.info("First ID is: " + firstId);
         return firstId;
     }
+
     @Step("Get information of Booking with specific ID:{id} ")
     public static Response getBookingInfo(String id, String url) {
         GetBookingId testId = new GetBookingId(id);
@@ -56,9 +61,10 @@ public class bookingServices {
         LogsUtils.info("Specific booking info");
         return resp;
     }
+
     @Step("Create New Booking")
-    public static Response createNewBooking(String url, CreateBookingPojo bookingBody,CreateBooking createBooking) {
-          Response resp =
+    public static Response createNewBooking(String url, CreateBookingPojo bookingBody, CreateBooking createBooking) {
+        Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
                         .baseUri(url)
@@ -74,18 +80,20 @@ public class bookingServices {
         LogsUtils.info("Booking Created");
         return resp;
     }
+
     @Step("Get the Booing ID")
     public static String getId(Response resp) {
         String bookingId;
         bookingId = resp.jsonPath().getString("bookingid");
-        LogsUtils.info("The ID is: "+bookingId);
+        LogsUtils.info("The ID is: " + bookingId);
 
         return bookingId;
     }
-    @Step("Fully Update the Booking with ID : {Id}")
-    public static Response updateCurrentBookingFully(String url, String Id, String token,CreateBookingPojo updateBookingBody ,UpdateBooking updateBooking) {
 
-             Response resp =
+    @Step("Fully Update the Booking with ID : {Id}")
+    public static Response updateCurrentBookingFully(String url, String Id, String token, CreateBookingPojo updateBookingBody, UpdateBooking updateBooking) {
+
+        Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
                         .baseUri(url)
@@ -99,12 +107,13 @@ public class bookingServices {
                         .then()
                         .statusCode(200)
                         .extract().response();
-        LogsUtils.info("booking with ID = "+Id+" is Updated");
+        LogsUtils.info("booking with ID = " + Id + " is Updated");
 
         return resp;
     }
+
     @Step("Partially Update Booking with ID: {Id}")
-    public static Response updateCurrentBookingPartially(String url, String Id, String token,Map<String, Object> partialUpdate,UpdateBooking updateBooking) {
+    public static Response updateCurrentBookingPartially(String url, String Id, String token, Map<String, Object> partialUpdate, UpdateBooking updateBooking) {
         Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
@@ -116,12 +125,13 @@ public class bookingServices {
                         .then()
                         .statusCode(200)
                         .extract().response();
-        LogsUtils.info("booking with ID = "+Id+" is Updated");
+        LogsUtils.info("booking with ID = " + Id + " is Updated");
 
         return resp;
     }
+
     @Step("Delete the Booking with the ID: {Id}")
-    public static Response deleteBooking(String url, String Id, String token,DeleteBooking deleteBooking ) {
+    public static Response deleteBooking(String url, String Id, String token, DeleteBooking deleteBooking) {
         Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
@@ -132,13 +142,16 @@ public class bookingServices {
                         .then()
                         .statusCode(201)
                         .extract().response();
-        LogsUtils.info("booking with ID = "+Id+"is Deleted");
+        LogsUtils.info("booking with ID = " + Id + "is Deleted");
         return resp;
     }
-    /**bad scenarios**/
+
+    /**
+     * bad scenarios
+     **/
     @Step("Create booking with no first name")
-    public static Response createNewBookingNoFirstName(String url,CreateBookingPojo bookingBody,CreateBooking createBooking) {
-          Response resp =
+    public static Response createNewBookingNoFirstName(String url, CreateBookingPojo bookingBody, CreateBooking createBooking) {
+        Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
                         .baseUri(url)
@@ -154,13 +167,13 @@ public class bookingServices {
         LogsUtils.info("Wrong Schema Missing argument");
         return resp;
     }
+
     @Step("Create booking checkin date is after checkout one")
-    public static Response createNewBookingWithWrongCheckinCheckout(String url, CreateBookingPojo bookingBody,CreateBooking createBooking) {
+    public static Response createNewBookingWithWrongCheckinCheckout(String url, CreateBookingPojo bookingBody, CreateBooking createBooking) {
         LocalDate checkin = LocalDate.parse(bookingBody.getBookingdates().getCheckin());
         LocalDate checkout = LocalDate.parse(bookingBody.getBookingdates().getCheckout());
-        Response resp ;
-        if (checkin.isBefore(checkout))
-        {
+        Response resp;
+        if (checkin.isBefore(checkout)) {
             resp =
                     given()
                             .spec(BaseApi.getRequestSpec())
@@ -175,8 +188,7 @@ public class bookingServices {
                             .statusCode(200)
                             .extract().response();
             LogsUtils.info("Nothing wrong in the schema");
-        }
-        else {
+        } else {
             resp =
                     given()
                             .spec(BaseApi.getRequestSpec())
@@ -195,9 +207,10 @@ public class bookingServices {
 
         return resp;
     }
+
     @Step("Fully Update Booking without Authentication")
-    public static Response updateCurrentBookingFullyWithNoAuthentication(String url, String Id,CreateBookingPojo updateBookingBody ,UpdateBooking updateBooking) {
-           Response resp =
+    public static Response updateCurrentBookingFullyWithNoAuthentication(String url, String Id, CreateBookingPojo updateBookingBody, UpdateBooking updateBooking) {
+        Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
                         .baseUri(url)
@@ -213,8 +226,9 @@ public class bookingServices {
         LogsUtils.info("Not authorized Fully Update");
         return resp;
     }
+
     @Step("Partially Update Booking without Authentication")
-    public static Response updateCurrentBookingPartiallyWithNoAuthentication(String url, String Id,Map<String, Object> partialUpdate,UpdateBooking updateBooking) {
+    public static Response updateCurrentBookingPartiallyWithNoAuthentication(String url, String Id, Map<String, Object> partialUpdate, UpdateBooking updateBooking) {
         Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
@@ -228,6 +242,7 @@ public class bookingServices {
         LogsUtils.info("Not authorized Partially Update");
         return resp;
     }
+
     @Step("Delete Booking without Authentication")
     public static Response deleteBookingUnauthorized(String url, String Id, DeleteBooking deleteBooking) {
         Response resp =
@@ -246,7 +261,7 @@ public class bookingServices {
     }
 
     @Step("Fully Update the Booking with ID : {Id} after Delete")
-    public static Response updateCurrentBookingFullyAfterDelete(String url, String Id, String token,CreateBookingPojo updateBookingBody ,UpdateBooking updateBooking) {
+    public static Response updateCurrentBookingFullyAfterDelete(String url, String Id, String token, CreateBookingPojo updateBookingBody, UpdateBooking updateBooking) {
 
         Response resp =
                 given()
@@ -266,8 +281,9 @@ public class bookingServices {
 
         return resp;
     }
+
     @Step("Partially Update Booking with ID: {Id}")
-    public static Response updateCurrentBookingPartiallyAfterDelete(String url, String Id, String token,Map<String, Object> partialUpdate,UpdateBooking updateBooking) {
+    public static Response updateCurrentBookingPartiallyAfterDelete(String url, String Id, String token, Map<String, Object> partialUpdate, UpdateBooking updateBooking) {
         Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())
@@ -283,8 +299,9 @@ public class bookingServices {
 
         return resp;
     }
+
     @Step("Delete the Booking with the ID: {Id}")
-    public static Response deleteBookingSecondTime(String url, String Id, String token,DeleteBooking deleteBooking ) {
+    public static Response deleteBookingSecondTime(String url, String Id, String token, DeleteBooking deleteBooking) {
         Response resp =
                 given()
                         .spec(BaseApi.getRequestSpec())

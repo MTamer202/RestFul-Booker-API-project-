@@ -15,14 +15,14 @@ public class BaseApi {
     File allure_results = new File("test-outputs/allure-results");
 
     @BeforeSuite
-    public void beforeSuite(){
+    public void beforeSuite() {
         FilesUtils.deleteFiles(allure_results);
     }
 
-    public static RequestSpecification getRequestSpec(){
+    public static RequestSpecification getRequestSpec() {
         return new RequestSpecBuilder().
                 setContentType(ContentType.JSON).
-                addHeader("Accept","application/json").
+                addHeader("Accept", "application/json").
                 build();
     }
 

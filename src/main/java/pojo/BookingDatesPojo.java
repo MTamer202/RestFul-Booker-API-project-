@@ -1,12 +1,10 @@
 package pojo;
 
-public class BookingDatesPojo
-{
+public class BookingDatesPojo {
     private String checkin;
     private String checkout;
 
-    public BookingDatesPojo(String checkin, String checkout)
-    {
+    public BookingDatesPojo(String checkin, String checkout) {
         this.setCheckin(checkin);
         this.setCheckout(checkout);
     }

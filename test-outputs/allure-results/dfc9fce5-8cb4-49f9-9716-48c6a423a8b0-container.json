@@ -1,0 +1,1 @@
+{"uuid":"dfc9fce5-8cb4-49f9-9716-48c6a423a8b0","name":"RestAssured Test Suite","children":["c3f5a6a2-886a-4074-96ca-27cbcc50f7df"],"befores":[{"name":"beforeSuite","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1764750214143,"stop":1764750214330}],"afters":[],"start":1764750214096,"stop":1764750246745}
