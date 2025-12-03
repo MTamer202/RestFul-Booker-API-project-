@@ -1,0 +1,109 @@
+[INFO] - [03-12-2025 10:23:34] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  E:\study\ITI content\api\my project\TestRunner.xml
+
+[INFO] - [03-12-2025 10:23:40] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:23:41] [main] [org.example.services.authenticationServices] - Token is: 628a8abc081401f
+
+[INFO] - [03-12-2025 10:23:42] [main] [org.example.services.authenticationServices] - Bad credentials
+
+[INFO] - [03-12-2025 10:23:42] [main] [org.example.services.authenticationServices] - Bad credentials
+
+[INFO] - [03-12-2025 10:23:43] [main] [org.example.services.authenticationServices] - Bad credentials
+
+[INFO] - [03-12-2025 10:23:44] [main] [org.example.services.bookingServices] - All IDs is here
+
+[INFO] - [03-12-2025 10:23:44] [main] [org.example.services.bookingServices] - First ID is: 561
+
+[INFO] - [03-12-2025 10:23:45] [main] [org.example.services.bookingServices] - Specific booking info
+
+[INFO] - [03-12-2025 10:23:46] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:46] [main] [org.example.services.bookingServices] - The ID is: 1633
+
+[INFO] - [03-12-2025 10:23:46] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:23:46] [main] [org.example.services.authenticationServices] - Token is: 2d843d227b58395
+
+[INFO] - [03-12-2025 10:23:47] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:47] [main] [org.example.services.bookingServices] - The ID is: 1647
+
+[INFO] - [03-12-2025 10:23:48] [main] [org.example.services.bookingServices] - booking with ID = 1647 is Updated
+
+[INFO] - [03-12-2025 10:23:49] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:23:49] [main] [org.example.services.authenticationServices] - Token is: 928d7f4fc33253e
+
+[INFO] - [03-12-2025 10:23:49] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:49] [main] [org.example.services.bookingServices] - The ID is: 1666
+
+[INFO] - [03-12-2025 10:23:50] [main] [org.example.services.bookingServices] - booking with ID = 1666 is Updated
+
+[INFO] - [03-12-2025 10:23:51] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:23:51] [main] [org.example.services.authenticationServices] - Token is: ac94f64087d15e1
+
+[INFO] - [03-12-2025 10:23:51] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:51] [main] [org.example.services.bookingServices] - The ID is: 1680
+
+[INFO] - [03-12-2025 10:23:52] [main] [org.example.services.bookingServices] - booking with ID = 1680is Deleted
+
+[INFO] - [03-12-2025 10:23:53] [main] [org.example.services.bookingServices] - Wrong Schema Missing argument
+
+[INFO] - [03-12-2025 10:23:54] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:54] [main] [org.example.services.bookingServices] - The ID is: 1710
+
+[INFO] - [03-12-2025 10:23:55] [main] [org.example.services.bookingServices] - Not authorized Fully Update
+
+[INFO] - [03-12-2025 10:23:56] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:56] [main] [org.example.services.bookingServices] - The ID is: 1726
+
+[INFO] - [03-12-2025 10:23:56] [main] [org.example.services.bookingServices] - Not authorized Partially Update
+
+[INFO] - [03-12-2025 10:23:57] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:57] [main] [org.example.services.bookingServices] - The ID is: 1739
+
+[INFO] - [03-12-2025 10:23:58] [main] [org.example.services.bookingServices] - Not authorized Delete
+
+[INFO] - [03-12-2025 10:23:58] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:23:58] [main] [org.example.services.authenticationServices] - Token is: 6e1265c2116382d
+
+[INFO] - [03-12-2025 10:23:59] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:23:59] [main] [org.example.services.bookingServices] - The ID is: 1759
+
+[INFO] - [03-12-2025 10:24:00] [main] [org.example.services.bookingServices] - booking with ID = 1759is Deleted
+
+[INFO] - [03-12-2025 10:24:01] [main] [org.example.services.bookingServices] - Method not allowed Cant update a deleted one
+
+[INFO] - [03-12-2025 10:24:01] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:24:01] [main] [org.example.services.authenticationServices] - Token is: 13f088a613a43fe
+
+[INFO] - [03-12-2025 10:24:02] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:24:02] [main] [org.example.services.bookingServices] - The ID is: 1781
+
+[INFO] - [03-12-2025 10:24:03] [main] [org.example.services.bookingServices] - booking with ID = 1781is Deleted
+
+[INFO] - [03-12-2025 10:24:03] [main] [org.example.services.bookingServices] - Method not allowed Cant update a deleted one
+
+[INFO] - [03-12-2025 10:24:04] [main] [org.example.services.authenticationServices] - Token is Created
+
+[INFO] - [03-12-2025 10:24:04] [main] [org.example.services.authenticationServices] - Token is: 02cc7cce835bcb9
+
+[INFO] - [03-12-2025 10:24:05] [main] [org.example.services.bookingServices] - Booking Created
+
+[INFO] - [03-12-2025 10:24:05] [main] [org.example.services.bookingServices] - The ID is: 1812
+
+[INFO] - [03-12-2025 10:24:06] [main] [org.example.services.bookingServices] - booking with ID = 1812is Deleted
+
+[INFO] - [03-12-2025 10:24:06] [main] [org.example.services.bookingServices] - Cant delete a deleted Booking
+

@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class LogsUtils {
 
-    public static final String Logs_Path =  "test-outputs/Logs";
+    public static final String Logs_Path = "test-outputs/Logs";
     private static final String delimiter = "  ";
 
     private static Logger logger() {

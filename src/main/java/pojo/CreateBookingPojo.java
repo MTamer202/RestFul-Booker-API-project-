@@ -1,7 +1,6 @@
 package pojo;
 
-public class CreateBookingPojo
-{
+public class CreateBookingPojo {
     private String firstname;
     private String lastname;
     private int totalprice;
